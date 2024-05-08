@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Meow+Script&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#modalBienvenida {
+
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: none;
+    z-index: 5;
+}
+
+
+#modalBoxB {
+
+    width: 800px;
+    height: 300px;
+    background-color: #F0E7E5;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#modalBoxB>h1 {
+
+    font-family: meow script;
+    color: #9C93B5;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#modalBoxB>button {
+
+    font-family: meow script;
+    text-align: center;
+    padding: 20PX 40PX;
+    color: #9C93B5;
+    font-size: 32px;
+    background-color: #F0E7E5;
+    border-radius: 15px;
+}
+
+
+#modalBoxB>button:hover {
+
+    color: #F0E7E5;
+    background-color: #C6AFC6;
+}
+
+#encabezado {
+
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    
+
+}
+
+.fondosHero {
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+#fondoHero1 {
+    background-image: linear-gradient(rgba(240, 231, 229, 0.4), rgba(240, 231, 229, 0.4)), url("img/fondo1.jpg");
+    z-index: 3;
+}
+
+#fondoHero2 {
+    background-image: linear-gradient(rgba(240, 231, 229, 0.4), rgba(240, 231, 229, 0.4)), url("img/fondo2.jpg");
+    z-index: 2;
+}
+
+#fondoHero3 {
+    background-image: linear-gradient(rgba(240, 231, 229, 0.4), rgba(240, 231, 229, 0.4)), url("img/fondo3.jpg");
+    z-index: 1;
+}
+
+.mainSlide{
+    animation-name: mainSlideAnim;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.nextSlide{
+    animation-name: nextSlideAnim;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.hiddenSlide {
+    display: none;
+}
+
+
+@keyframes mainSlideAnim {
+    0%{margin-left: 0%;}
+    100%{margin-left: -100%;}
+    
+}
+
+@keyframes nextSlideAnim {
+    0%{margin-left: 100%;}
+    100%{margin-left: 0%;}
+    
+}
+
+
+nav {
+
+    width: 100%;
+    height: 150px;
+    background-color: #F0E7E5;
+    /* overflow: hidden; */
+    font-size: 32px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    transition-property: top, height, font-size;
+    transition-duration: 1s;
+}
+
+#logo {
+
+    height: 100%;
+    width: auto;
+    /* background-color: coral; */
+    float: left;
+    display: block;
+    margin-left: 100px;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+
+#menu {
+
+    list-style: none;
+    width: auto;
+    overflow: hidden;
+    float: right;
+    margin-right: 100px;
+    line-height: 150px;
+    transition-property: line-height;
+    transition-duration: 1s;
+
+}
+
+
+.elementoMenu {
+
+    float: left;
+    margin: 0px 30px;
+}
+
+
+.elementoMenu>a {
+
+    font-family: habibi;
+   color: #C6AFC6;
+   text-decoration: none;
+   /* font-size: 32px; */
+   transition-property: color;
+   transition-duration: 0.5s;
+}
+
+
+.elementoMenu> a:hover {
+    color: #E8D0D0;
+}
+
+#submenu {
+
+    width: auto;
+    height: 200px;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: #F0E7E5;
+
+
+}
+
+.elementoSubmenu {
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.elementoSubmenu >a{
+
+    font-family: habibi;
+    text-decoration: none;
+    color: #C6AFC6;
+}
+
+.elementoSubmenu >a:hover{
+
+    color: #E8D0D0;
+}
+
+
+.elementoMenu:hover #submenu {
+    display: block;
+}
+
+#tituloEncabezado {
+
+    font-size: 96px;
+    font-family: meow script;
+    color: #9C93B5;
+    text-align: center;
+    position: relative;
+    top: 415px;
+    text-shadow: 1px 9px 5px rgba(0, 0, 0, 0.57);
+    animation-name: fadein;
+    animation-duration: 4s;
+    z-index: 4;
+}
+
+
+#subtituloEncabezado {
+
+    font-family: habibi;
+    font-size: 32px;
+    color: #EED8D8;
+    text-align: center;
+    position: relative;
+    top: 430px;
+    text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.57);
+    animation-name: fadein2;
+    animation-duration: 5.5s;
+    z-index: 4;
+}
+
+
+@keyframes fadein {
+
+    0% { opacity: 0; top: 500px;}
+    50% {opacity: 1; top: 500px;}
+    100% {opacity: 1; top: 415px;}
+}
+
+
+@keyframes fadein2 {
+
+    0% { opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#musica {
+    width: 100%;
+    height: 925px;
+    background-color: #9C93B5;
+    overflow: hidden;
+}
+
+#contenedorMusica {
+    width: 1200px;
+    height: 625px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    overflow: hidden;
+
+}
+
+.colMusica {
+
+    width: 50%;
+    height: 565px;
+    float: left;
+
+}
+
+#videoMusica {
+    width: calc(100% - 75px);
+    height: 300px;
+    background-color: #9C93B5;
+    margin-right: 75px;
+}
+
+.colMusica >p {
+    font-family: habibi;
+    font-size: 24px;
+    color: #F0E7E5;
+    padding-left: 75px;
+}
+
+.enlaceCustom {
+    color: #E8D0D0;
+    text-decoration: none;
+}
+
+#novedades {
+
+    width: 100%;
+    height: 950px;
+    background-color: #9C93B5;
+    overflow: hidden;
+}
+
+
+.tituloSeccion {
+
+    font-family: habibi;
+    font-size: 48px;
+    color: #F0E7E5;
+    text-align: center;
+    margin-top: 150px;
+
+
+}
+
+
+.contenedorLibros, .contenedorLibros2 {
+
+    width: 1245px;
+    height: 390px;
+    margin-top: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+}
+
+#promocion {
+
+    width: 100%;
+    height: 950px;
+    overflow: hidden;
+}
+
+
+.tituloSeccionDcha {
+
+    text-align: left;
+    width: 600px;
+    margin-top: 0px;
+
+}
+
+
+.contenedor {
+    width: 1200px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 95px;
+    overflow: hidden;
+
+}
+
+
+.colPromo1 {
+
+    width: 740px;
+    height: 480px;
+    float: left;
+    
+}
+
+
+.colPromo2 {
+
+    width: 400px;
+    height: 630px;
+    float: left;
+    margin-left: 60px;
+}
+
+
+#subColPromo1 {
+    width: 290px;
+    height: 480px;
+    background-color: #F0E7E5;
+    float: left;
+    margin-top: 95px;
+    float: left;
+}
+
+
+#subColPromo2 {
+    width: 450px;
+    height: 480px;
+    background-color: #F0E7E5;
+    float: left;
+    margin-top: 95px;
+}
+
+
+ #imagenPromo {
+
+    width: 229px;
+    height: 334px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+    margin-top: 73px;
+    margin-left: 60px;
+    overflow: hidden;
+    float: left;
+}
+
+
+.nombreLibro {
+
+    margin-top: 131px;
+    margin-left: 40px;
+    font-family: habibi;
+    font-size: 48px;
+    color: #9C93B5;
+    text-align: left;
+
+}
+
+
+.autorLibro {
+
+    font-family: habibi;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: left;
+    color: #E8D0D0;
+}
+
+
+.precioNombreLibro {
+
+    font-family: habibi;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 60px;
+    font-size: 36px;
+    text-align: right;
+    color: #9C93B5;
+}
+
+
+#galeria {
+
+    width: 100%;
+    height: 950px;
+    background-color: #F0E7E5;
+    overflow: hidden;
+}
+
+
+.tituloOscuro {
+
+    color: #9C93B5;
+}
+
+
+#contenedorEtiquetasPestanas {
+    width: 565px;
+    float: right;
+    overflow: hidden;
+    margin-right: 22.5px;
+    margin-top: 20px;
+
+}
+
+
+.colGaleria1 {
+
+    width: 530px;
+    height: 55px;
+    float: left;
+    
+}
+
+
+.etiquetaPestanas {
+
+    font: bold;
+    font-family: habibi;
+    width: 23.8%;
+    font-size: 20px;
+    color: #E8D0D0;
+    float: left;
+    text-align: center;
+    transition-property: color;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+
+.pestanaActiva {
+
+    color: #C6AFC6;
+    border-bottom-style: solid;
+}
+
+.libro {
+
+    width: calc(20% - 45px);
+    height: 100%;
+    float: left;
+    margin-right: 22.5px;
+    margin-left: 22.5px;
+}
+
+@keyframes animLibro {
+    from {transform: scale(0.75, 0.75);};
+    to {transform: scale(1, 1);};
+}
+
+.libroAnimado {
+    animation-name: animLibro;
+    animation-duration: 1s;
+}
+
+
+.contenedor2 {
+
+    width: 1245px;
+    height: 540px;
+
+}
+
+.tituloSeccionDcha2 {
+
+    text-align: left;
+    width: 600px;
+    margin-top: 0px;
+    margin-left: 22.5px;
+
+}
+
+
+.imagenLibro2 {
+
+    width: 201px;
+    height: 293px;
+    overflow: hidden;
+}
+
+.imagenLibro2 img {
+    width: 100%;
+}
+
+.imagenLibro2:hover {
+    box-shadow: 0px 0px 7px 4px #C6AFC6;
+    cursor: pointer;
+}
+
+.imagenLibro {
+
+    width: 201px;
+    height: 293px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #9C93B5;
+}
+
+.imagenLibro img {
+
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+   transition-duration: 0.3s;
+}
+
+.imagenLibro img:hover{
+
+    transform: scale(1.2,1.2);
+
+}
+
+#modalLightBoxG {
+
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 5;
+}
+
+
+#imageToShow {
+
+    background-color: #F0E7E5;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.imageLightbox{
+    width: 100%;
+    height: auto;
+
+}
+
+.lbButtons {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%);
+    background-color: #F0E7E5;
+}
+
+.lbButtons:hover {
+    background-color: #C6AFC6;
+}
+
+.lbRight{
+    right: 500px;
+}
+
+.lbLeft{
+    left: 600px;
+}
+
+.lbButtons i {
+    font-size: 42px;
+    color: #9C93B5;
+}
+
+.lbButtons:hover i {
+
+    color: #F0E7E5;
+}
+
+.nombreLibro2 {
+
+    font-family: habibi;
+    color: #EED8D8;
+    font-size: 24px;
+    text-align: left;
+}
+
+.nombreLibro3 {
+
+    font-family: habibi;
+    color: #C6AFC6;
+    font-size: 24px;
+    text-align: left;
+}
+
+
+.autorLibro2 {
+
+    font-family: habibi;
+    color: #EED8D8;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.autorLibro3 {
+
+    font-family: habibi;
+    color: #C6AFC6;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.precioNombreLibro2 {
+
+    font-family: habibi;
+    color: #F0E7E5;
+    font-size: 32px;
+    text-align: right;
+}
+
+.precioNombreLibro3 {
+
+    font-family: habibi;
+    color: #9C93B5;
+    font-size: 32px;
+    text-align: right;
+}
+
+#newsletter {
+
+    width: 100%;
+    height: 950px;
+    background-color: #F0E7E5;
+    overflow: hidden;
+}
+
+.contenedor3 {
+
+    background-color: #9C93B5;
+    height: 480px;
+
+}
+
+#textoNewsletter {
+
+    font-family: habibi;
+    color: #F0E7E5;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 95px;
+    margin-left: 190px;
+    margin-right: 190px;
+
+}
+
+#formulario {
+
+    width: 50%;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 311.25px;
+}
+
+input {
+
+    display: block;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 500px;
+
+}
+
+.botonNewsletter {
+
+    font-family: habibi;
+    color: #C6AFC6;
+    font-size: 16px;
+    background-color: #F0E7E5;
+    height: 30px;
+    text-align: left;
+    border-style: none;
+
+}
+
+#botonEnviar {
+
+    font-family: habibi;
+    color: #9C93B5;
+    font-size: 32px;
+    background-color: #F0E7E5;
+    height: 60px;
+    border-style: none;
+    transition-property: color, border-style, background-color;
+    transition-duration: 0.5s;
+    text-align: center;
+
+}
+
+#botonEnviar:hover {
+
+    color: #F0E7E5;
+    background-color: #C6AFC6;
+    border-style: solid;
+
+}
+
+
+#modalNewsletter {
+
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    display: none;
+    z-index: 5;
+}
+
+
+#modalBoxR {
+
+    width: 800px;
+    height: 400px;
+    background-color: #F0E7E5;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#modalBoxR>h1 {
+
+    font-family: habibi;
+    color: #9C93B5;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#modalBoxR>p {
+
+    font-family: habibi;
+    color: #9C93B5;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#modalBoxR>button {
+
+    font-family: habibi;
+    text-align: center;
+    padding: 13PX 18PX;
+    color: #9C93B5;
+    font-size: 24px;
+    background-color: #F0E7E5;
+    border-radius: 15px;
+}
+
+
+#modalBoxR>button:hover {
+
+    color: #F0E7E5;
+    background-color: #C6AFC6;
+}
+
+
+#pie {
+    width: 100%;
+    height: 100px;
+    background: #9C93B5;
+    overflow: hidden;
+}
+
+
+#pie img {
+
+    height: 100%;
+    width: auto;
+    
+}
+
+#contenedorIconos {
+
+    height: 50px;
+    width: 337px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+
+#instagram {
+
+    width: 50px;
+    height: 100%;
+    float: left;
+}
+
+
+#facebook {
+
+    width: 50px;
+    height: 100%;
+    float: right;
+}
+
+
+#x {
+
+    width: 50px;
+    height: 100%;
+    float: left;
+    margin-left: 95px;
+}

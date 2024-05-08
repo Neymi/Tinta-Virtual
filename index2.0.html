@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinta Virtual</title>
+    <link href="style2.0.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/72645727d3.js" crossorigin="anonymous"></script>
+    <link rel="preload" as="image" href="img/fondo1.jpg">
+    <link rel="preload" as="image" href="img/fondo2.jpg">
+    <link rel="preload" as="image" href="img/fondo3.jpg">
+
+</head>
+<body>
+
+    <div id="modalBienvenida">
+        <div id="modalBoxB">
+            <h1>Bienvenido a la web de Tinta virtual</h1>
+            <button onclick="cerrarMBB()">Empieza</button>
+        </div>
+
+    </div>
+
+    <header id="encabezado">
+
+        <div class="fondosHero" id="fondoHero1"></div>
+        <div class="fondosHero" id="fondoHero2"></div>
+        <div class="fondosHero" id="fondoHero3"></div>
+
+        <nav id="navbar">
+            <a href="index2.0.html">
+                <img id="logo" src="img/logo.png" alt="">
+            </a>
+            <ul id="menu">
+                <li class="elementoMenu">
+                    <a href="#musica">Música</a>
+                </li>
+                <li class="elementoMenu">
+                    <a href="#novedades">Novedades</a>
+                </li>
+                <li class="elementoMenu">
+                    <a href="#promocion">Promociones</a>
+                </li>
+                <li class="elementoMenu">
+                    <a href="#galeria">Galería</a>
+                    <ul id="submenu">
+                        <li class="elementoSubmenu">
+                            <a href="#fantasia" onclick="marcarPestana('fantasia','tabFantasia')">Fantasía</a>
+                        </li>
+                        <li class="elementoSubmenu">
+                            <a href="#romance" onclick="marcarPestana('romance','tabRomance')">Romance</a>
+                        </li>
+                        <li class="elementoSubmenu">
+                            <a href="#distopica" onclick="marcarPestana('distopica','tabDistopica')">Novela distópica</a>
+                        </li>
+                        <li class="elementoSubmenu">
+                            <a href="#comic" onclick="marcarPestana('comic','tabComic')">Cómic y manga</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="elementoMenu">
+                    <a href="#newsletter">Newsletter</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 id="tituloEncabezado">Tinta Virtual</h1>
+        <h2 id="subtituloEncabezado">La imaginación te da alas... las de la libertad.</h2>
+
+
+    </header>
+
+    <section id="musica">
+        <h2 class="tituloSeccion"  data-aos="flip-left">Música</h2>
+        <div id="contenedorMusica">
+
+            <div class="colMusica">
+                <video src="musicaLeer.mp4" id="videoMusica" controls muted autoplay></video>
+            </div>
+            <div class="colMusica">
+                <p>¡Bienvenido a nuestra lista de reproducción pensada para acompañarte mientras lees! Sumérgete en un ambiente de inspiración y creatividad con la música seleccionada cuidadosamente por <a href="https://www.youtube.com/@TheDreamersMusic_Official" class="enlaceCustom">The Dreamers</a>. Esta lista está diseñada para brindarte la banda sonora perfecta mientras disfrutas de tu lectura. ¡Déjate llevar por las melodías y sumérgete en tu mundo de imaginación y reflexión!</p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="novedades">
+        <h2 class="tituloSeccion" data-aos="fade-up">Novedades</h2>
+        <div class="contenedorLibros2">
+            <div class="libro">
+                <div id="imgMarina" class="imagenLibro2" data-aos="flip-left" data-aos-delay="100">
+                    <img src="img/marina.jpg" alt="">
+                </div>
+                <h3 class="nombreLibro2">Marina</h3>
+                <h3 class="autorLibro2">Carlos Ruiz Zafón</h3>
+                <h3 class="precioNombreLibro2">21,95€</h3>
+            </div>
+            <div class="libro">
+                <div id="imgMujerDiosaReina" class="imagenLibro2" data-aos="flip-left" data-aos-delay="200">
+                    <img src="img/Mujer,diosa,reina.jpg" alt="">
+                </div>
+                <h3 class="nombreLibro2">Mujer,diosa,reina</h3>
+                <h3 class="autorLibro2">Bez Fitzgerald</h3>
+                <h3 class="precioNombreLibro2">18,95€</h3>
+            </div>
+            <div class="libro">
+                <div id="imgVertigo" class="imagenLibro2" data-aos="flip-left" data-aos-delay="300">
+                    <img src="img/vertigo.jpg" alt="">
+                </div>
+                <h3 class="nombreLibro2">Vértigo</h3>
+                <h3 class="autorLibro2">Cristina Mellado</h3>
+                <h3 class="precioNombreLibro2">17,90€</h3>
+            </div>
+            <div class="libro">
+                <div id="imgHeartStopper" class="imagenLibro2" data-aos="flip-left" data-aos-delay="400">
+                    <img src="img/Heartstopper.jpg" alt="">
+                </div>
+                <h3 class="nombreLibro2">Heartstopper 5</h3>
+                <h3 class="autorLibro2">Alice Oseman</h3>
+                <h3 class="precioNombreLibro2">15,95€</h3>
+            </div>
+            <div class="libro">
+                <div id="imgAlasDeHierro" class="imagenLibro2" data-aos="flip-left" data-aos-delay="500">
+                    <img src="img/Alasdehierro.jpg" alt="">
+                </div>
+                <h3 class="nombreLibro2">Alas de hierro</h3>
+                <h3 class="autorLibro2">Rebeca Yarros</h3>
+                <h3 class="precioNombreLibro2">23,90€</h3>
+            </div>
+        </div>
+
+        <div id="modalLightBoxG">
+            <div id="imageToShow">
+
+            </div>
+            <button class="lbButtons lbRight" onclick="nextImgGal()">
+                <i class="fas fa-solid fa-angle-right"></i>
+            </button>
+            <button class="lbButtons lbLeft" onclick="prevImgGal()">
+                <i class="fas fa-solid fa-angle-left"></i>
+            </button>
+    
+        </div>
+
+    </section>
+
+    <section id="promocion">
+        <div class="contenedor">
+            <div class="colPromo1" data-aos="fade-up">
+                <h2 class="tituloSeccion tituloSeccionDcha" data-aos="fade-up">Promoción de la semana</h2>
+                <div id="subColPromo">
+                    <div id="subColPromo1">
+                        <h3 id="imagenPromo">
+                            <img src="img/alasdesangre.jpg" alt="">
+                        </h3>
+                    </div>
+                    <div id="subColPromo2">
+                        <h3 class="nombreLibro">Alas de Sangre</h3>
+                        <h3 class="autorLibro">Rebecca Yarros</h3>
+                        <h3 class="precioNombreLibro">20,90€</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="colPromo2" data-aos="fade-up">
+                <img src="img/rebeccaYarros.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="galeria">
+
+        <div class="contenedor contenedor2">
+            <div class="colGaleria1">
+                <h2 class="tituloSeccion tituloSeccionDcha2 tituloOscuro" data-aos="fade-up">Libros por categoría</h2>
+            </div>
+            <div id="contenedorEtiquetasPestanas">
+                <p id="tabFantasia" class="etiquetaPestanas pestanaActiva" onclick="marcarPestana('fantasia','tabFantasia')">Fantasía</p>
+                <p id="tabRomance" class="etiquetaPestanas" onclick="marcarPestana('romance','tabRomance')">Romance</p>
+                <p id="tabDistopica" class="etiquetaPestanas" onclick="marcarPestana('distopica','tabDistopica')">Novela distópica</p>
+                <p id="tabComic" class="etiquetaPestanas" onclick="marcarPestana('comic','tabComic')">Cómic y manga</p>
+            </div>
+    
+            <div class="contenedorLibros contenedorLibros2" id="fantasia">
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/berenyluthien.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Beren y Lúthien</h3>
+                    <h3 class="autorLibro3">J.R.R.Tolkien</h3>
+                    <h3 class="precioNombreLibro3">18,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/kalpaimperial.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Kalpa Imperial</h3>
+                    <h3 class="autorLibro3">Angélica Gorodischer</h3>
+                    <h3 class="precioNombreLibro3">18,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/silencio.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Silencio</h3>
+                    <h3 class="autorLibro3">Dylan Farrow</h3>
+                    <h3 class="precioNombreLibro3">17,95€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/pathfinder.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Pathfinder</h3>
+                    <h3 class="autorLibro3">Orson Scott Card</h3>
+                    <h3 class="precioNombreLibro3">16,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/laprincesaprometida.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">La princesa..</h3>
+                    <h3 class="autorLibro3">William goldman</h3>
+                    <h3 class="precioNombreLibro3">17,00€</h3>
+                </div>
+            </div>
+             <div class="contenedorLibros contenedorLibros2" id="romance">
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/indeleble.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Indeleble</h3>
+                    <h3 class="autorLibro3">Melissa Ibarra</h3>
+                    <h3 class="precioNombreLibro3">13,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/queridaAbril.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Querida Abril</h3>
+                    <h3 class="autorLibro3">Cristina Aleixandre</h3>
+                    <h3 class="precioNombreLibro3">10,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/entreLineas.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Entre líneas</h3>
+                    <h3 class="autorLibro3">Noe Casado</h3>
+                    <h3 class="precioNombreLibro3">5,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/fuisteMiVerano.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Fuiste mi verano</h3>
+                    <h3 class="autorLibro3">Andrea Longarela</h3>
+                    <h3 class="precioNombreLibro3">10,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/igor.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Igor</h3>
+                    <h3 class="autorLibro3">Fabiana Peralta</h3>
+                    <h3 class="precioNombreLibro3">10,50€</h3>
+                </div>
+            </div>
+            <div class="contenedorLibros contenedorLibros2" id="distopica">
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/japanSinks.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Japan Sinks</h3>
+                    <h3 class="autorLibro3">Sakyo Komatsu</h3>
+                    <h3 class="precioNombreLibro3">23,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/elColorDelOdio.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">El color del odio</h3>
+                    <h3 class="autorLibro3">Malorie Blackman</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/nieveEnMarte.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Nieve en Marte</h3>
+                    <h3 class="autorLibro3">Pablo Tébar Goyanes</h3>
+                    <h3 class="precioNombreLibro3">18,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/1984.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">1984</h3>
+                    <h3 class="autorLibro3">George Orwell</h3>
+                    <h3 class="precioNombreLibro3">11,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/ElReinoVacio.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">El reino vacío</h3>
+                    <h3 class="autorLibro3">Kira Jane Buxton</h3>
+                    <h3 class="precioNombreLibro3">20,50€</h3>
+                </div>
+            </div>
+            <div class="contenedorLibros contenedorLibros2" id="comic">
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/Onepiece.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">One Piece 103</h3>
+                    <h3 class="autorLibro3">Eiichiro Oda</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/mha.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">MHA 33</h3>
+                    <h3 class="autorLibro3">Kohei Horikoshi</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/haikyu.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Haikyû! 18</h3>
+                    <h3 class="autorLibro3">Haruichi Furudate</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/db.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">DBS 18</h3>
+                    <h3 class="autorLibro3">Akira Toriyama</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+                <div class="libro">
+                    <div class="imagenLibro">
+                        <img src="img/bl.jpg" alt="">
+                    </div>
+                    <h3 class="nombreLibro3">Blue Lock 11</h3>
+                    <h3 class="autorLibro3">Muneyuki Kaneshiro</h3>
+                    <h3 class="precioNombreLibro3">8,50€</h3>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    <section id="newsletter">
+        <h2 class="tituloSeccion tituloOscuro" data-aos="fade-up">Newsletter</h2>
+        <div class="contenedor contenedor3">
+            <h3 id="textoNewsletter">¡No te pierdas ni una sola actualización de Tinta Virtual! Suscríbete ahora a nuestra newsletter y sé el primero en enterarte de las últimas novedades literarias, ofertas exclusivas y eventos especiales. ¡No esperes más, la próxima gran aventura literaria te espera!</h3>
+            <form action="" id="formulario">
+                <input id="newsletterNombre" class="botonNewsletter" type="text" name="nombre" placeholder="Nombre y apellidos" required>
+                <input id="newsletterTelefono" class="botonNewsletter" type="tel" name="telefono" placeholder="Teléfono" required>
+                <input id="newsletterCorreo" class="botonNewsletter" type="email" name="email" placeholder="correo electrónico" required>
+                <input id="botonEnviar" onclick="modalNewsletter()" type="button" value="Suscribirse">
+            </form>
+        </div>
+
+    <div id="modalNewsletter">
+        <div id="modalBoxR">
+            <h1>Mensaje de confirmación de envío de datos</h1>
+            <p id="mensajeNewsletter"> Lorem ipsum</p>
+            <button onclick="cerrarModal()">Aceptar</button>
+        </div>
+    </div>
+
+
+
+    </section>
+
+    <footer id="pie">
+
+        <div id="contenedorIconos">
+            <div id="instagram">
+                <a href="https://www.instagram.com/">
+                    <img src="img/instagram.png" alt="">
+                </a>
+                
+            </div>
+            <div id="facebook">
+                <a href="https://www.facebook.com/">
+                    <img src="img/facebook.png" alt="">
+                </a>
+                
+            </div>
+            <div id="x">
+                <a href="https://twitter.com/">
+                    <img src="img/gorjeo.png" alt="">
+                </a>
+                
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        modalBienvenida();
+        readyLightbox();
+        toolTip();
+        
+        $('#promocion').parallax({imageSrc: 'img/dragonfondo2.jpg'});
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
